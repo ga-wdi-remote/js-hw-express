@@ -11,16 +11,16 @@ Then run `git pull upstream master` to pull the latest materials from the
 instructors' repository. You shouldn't hit a merge conflict here, but if you do,
 flag down an instructor right away.
 
-#### Exercise Objectives
+## Exercise Objectives
 
 - gain practice installing [Express](http://expressjs.com/) and [Handlebars](http://Handlebarsjs.com/)
 - gain practice setting up an `express` application from scratch
 - gain meaningful experience with routing and views
 
 
-#### Directions
+## Directions
 
-#### Part 1: Installing & Setting up our Express app
+### Part 1: Installing & Setting up our Express app
 
 1. In the terminal: `mkdir pizza-express` in the `homework` directory
 2. `cd` into the `pizza-express` folder
@@ -60,7 +60,7 @@ app.listen(port, function(){
 
 9. git add, and git commit with the message "set up express server"
 
-#### Part 2: Express Routing
+### Part 2: Express Routing
 On `app.js` we will create 3 routes.
 
 1. Make a GET route for `"/"` root directory. When a user visits this route on `localhost:3000/` they will see the string "Welcome to Pizza Express!"
@@ -97,7 +97,7 @@ app.get('/order/:amount/:size', function(req, res, next) {
 - Don't forget you can debug by console.logging inside your routes. All server-side console.logs are visible in the terminal only.
 </details>
 
-#### Part 3: Express Views & Handlebars
+### Part 3: Express Views & Handlebars
 We are going to add views to your Pizza Express app and spice things up.
 
 1. In the `pizza-express` directory, install and set up Handlebars: `npm install --save hbs`
@@ -145,7 +145,7 @@ app.set('views', './views');
 </details>
 
 
-#### Part 4: Tie it together
+### Part 4: Tie it together
 Now we have to connect our routes with our views and pass data to the client by modifying the routes and adding handlebar syntax.
 
 Our outcome will LOOK the same, but we'll change things "under the hood".
@@ -163,7 +163,7 @@ Our outcome will LOOK the same, but we'll change things "under the hood".
 </details>
 
 
-#### Reach Goals
+### Reach Goals
 1. Add a 4th "catch" route. This will be a "404 Page Not Found" route in which if the user visits any route besides "/", "/toppings", the server will "catch" the user is trying to access a non-existant route, and the user will see a "404 Page Not Found" message.
 
 For example, a request to `localhost:3000/pizza` will respond with a 404 message instead of "Cannot GET /pizza"
