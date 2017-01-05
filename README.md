@@ -145,13 +145,9 @@ We are going to add views to your Pizza Express app and spice things up.
 </details>
 
 
-<<<<<<< HEAD
-#### Part 4: Tie it together
-Now we have to connect our routes with our views and pass data to the client by modifying the routes and using Handlebars.
-=======
+
 ### Part 4: Tie it together
 Now we have to connect our routes with our views and pass data to the client by modifying the routes and adding handlebar syntax.
->>>>>>> aabb68fccdb01e954bfa5f2fb614baaea83a8b2b
 
 Our outcome will LOOK the same on the client, but we'll change things "under the hood".
 
