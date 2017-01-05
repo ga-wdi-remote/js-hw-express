@@ -159,13 +159,13 @@ Our outcome will LOOK the same on the client, but we'll change things "under the
 
   app.get("/test/:someValue", function(req, res, next){
     res.render("index.hbs", {
-      data: req.params.someValue
+      message: req.params.someValue
     });
   });
 
   //index.hbs
   <h1>My test message</h1>
-  My message is {{data}}, woohoo!
+  My message is {{message}}, woohoo!
   ```
   </details>
 
