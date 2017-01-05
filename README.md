@@ -78,12 +78,12 @@ On `app.js` we will create 3 routes.
 
 The syntax for the route will look like this:
 
-  ```
-  app.get('/order/:amount/:size', function(req, res, next) {
+   ```
+   app.get('/order/:amount/:size', function(req, res, next) {
 
-      res.send( // something );
-  });
-  ```
+       res.send( // something );
+   });
+   ```
 
 4. git add, and git commit with the message "completed GET routes"
 
