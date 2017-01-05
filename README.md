@@ -63,7 +63,7 @@ app.listen(port, function(){
 #### Part 2: Express Routing
 On `app.js` we will create 3 routes.
 
-1. Make a GET route for `"/"` root directory. When a user visits this route on `localhost:3000/` they will see the string "Welcome to Pizza Express!"
+1. Make a GET route for `"/"` root route. When a user visits this route on `localhost:3000/` they will see the string "Welcome to Pizza Express!"
 
 2. Make a GET route for `/topping` that has 1 variable destination for the type of topping. When a user visits this route on `localhost:3000/topping/pepperoni`, they will see the string "`pepperoni` pizza! Good choice." The syntax for the route will look like this:
 
@@ -111,8 +111,9 @@ app.set("view engine", "hbs");
 app.set('views', './views');
 ```
 
-4. Create a `views` folder in `pizza-express`. We are going to create 3 view (Handlebars) files, 1 for each route. Make sure these are INSIDE the `views` folder:
+4. Create a `views` folder in `pizza-express`. We are going to create 4 view (Handlebars) files, 1 for each route + 1 layout file. Make sure these are INSIDE the `views` folder:
   - layout.hbs
+  - index.hbs
   - toppings.hbs
   - order.hbs
 
@@ -128,6 +129,7 @@ app.set('views', './views');
   > node_modules
   > views
      - layout.hbs
+     - index.hbs
      - toppings.hbs
      - order.hbs
   - app.js
@@ -146,13 +148,31 @@ app.set('views', './views');
 
 
 #### Part 4: Tie it together
-Now we have to connect our routes with our views and pass data to the client by modifying the routes and adding handlebar syntax.
+Now we have to connect our routes with our views and pass data to the client by modifying the routes and using Handlebars.
 
-Our outcome will LOOK the same, but we'll change things "under the hood".
+Our outcome will LOOK the same on the client, but we'll change things "under the hood".
 
-1. Edit the 3 routes so that instead of `res.send("Some String")`, you are now passing an object with data using `res.render(.....)`
+1. Edit the 3 routes so that instead of sending a string with `res.send("Some String Message")`, you are now passing an OBJECT with data using `res.render(.....)`.
 
-2. Set up your Handlebars page with Handlebars. You will want to begin with `layout.hbs`. The pages will still display the same messages.
+  <details><summary>Super Hint Example:</summary>
+  ```js
+  //app.js
+
+  app.get("/test/:someValue", function(req, res, next){
+    res.render("index.hbs", {
+      data: req.params.someValue
+    });
+  });
+
+  //index.hbs
+  <h1>My test message</h1>
+  My message is {{data}}, woohoo!
+  ```
+  </details>
+
+
+
+2. Set up your Handlebars page with Handlebars. You will want to begin with `layout.hbs` and fill out the rest of the hbs pages. The pages will still display the same messages.
 
 3. git add, and git commit with the message "refactored routes and added views"
 
