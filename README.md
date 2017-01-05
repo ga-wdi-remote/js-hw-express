@@ -54,8 +54,8 @@ flag down an instructor right away.
     console.log('LISTENING ON PORT ' + port);
     console.log("==========================")
   });
-
-```
+  ```
+  
 8. In terminal, run your server with `node app.js` and confirm on your terminal you are connected. Visit `localhost:3000` on your browser.
 
 9. git add, and git commit with the message "set up express server"
