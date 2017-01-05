@@ -29,11 +29,11 @@ flag down an instructor right away.
 4. Install Express `npm install express --save`
 5. Verify express was installed locally by checking `package.json`:
 
-```json
-"dependencies": {
-  "express": "^4.13.4"
-}
-```
+   ```json
+   "dependencies": {
+     "express": "^4.13.4"
+   }
+   ```
 
 6. `touch app.js` in `pizza-express` directory. We will be writing our code here.
 7. Create your server in `app.js`:
