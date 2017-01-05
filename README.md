@@ -38,22 +38,22 @@ flag down an instructor right away.
 6. `touch app.js` in `pizza-express` directory. We will be writing our code here.
 7. Create your server in `app.js`:
 
-```javascript
-// app.js
+  ```javascript
+  // app.js
 
-//require express package
-var express = require('express');
-//save an express module as 'app'
-var app     = express();
-// assigning 3000 as our port
-var port    = 3000;
+  //require express package
+  var express = require('express');
+  //save an express module as 'app'
+  var app     = express();
+  // assigning 3000 as our port
+  var port    = 3000;
 
-// tells the server to listen for requests on port 3000
-app.listen(port, function(){
-  console.log("==========================")
-  console.log('LISTENING ON PORT ' + port);
-  console.log("==========================")
-});
+  // tells the server to listen for requests on port 3000
+  app.listen(port, function(){
+    console.log("==========================")
+    console.log('LISTENING ON PORT ' + port);
+    console.log("==========================")
+  });
 
 ```
 8. In terminal, run your server with `node app.js` and confirm on your terminal you are connected. Visit `localhost:3000` on your browser.
@@ -67,23 +67,23 @@ On `app.js` we will create 3 routes.
 
 2. Make a GET route for `/topping` that has 1 variable destination for the type of topping. When a user visits this route on `localhost:3000/topping/pepperoni`, they will see the string "`pepperoni` pizza! Good choice." The syntax for the route will look like this:
 
-```
-app.get('/topping/:type', function(req, res, next) {
+  ```
+  app.get('/topping/:type', function(req, res, next) {
 
-    res.send( // something );
-});
-```
+      res.send( // something );
+  });
+  ```
 
 3. Make a GET route for `/order` that has 2 variable destinations (# of pizza, pizza size). When a user visits this route on `localhost:3000/order/10/medium`, they will see "Your order for `10` `medium` pizzas will be ready in 1 minute!"
 
 The syntax for the route will look like this:
 
-```
-app.get('/order/:amount/:size', function(req, res, next) {
+  ```
+  app.get('/order/:amount/:size', function(req, res, next) {
 
-    res.send( // something );
-});
-```
+      res.send( // something );
+  });
+  ```
 
 4. git add, and git commit with the message "completed GET routes"
 
@@ -104,12 +104,12 @@ We are going to add views to your Pizza Express app and spice things up.
 2. Double check package.json to make sure it was installed
 3. In `app.js` require hbs + set up the view engine:
 
-```
-var hbs = require('hbs');
+  ```
+  var hbs = require('hbs');
 
-app.set("view engine", "hbs");
-app.set('views', './views');
-```
+  app.set("view engine", "hbs");
+  app.set('views', './views');
+  ```
 
 4. Create a `views` folder in `pizza-express`. We are going to create 3 view (Handlebars) files, 1 for each route. Make sure these are INSIDE the `views` folder:
   - layout.hbs
@@ -123,20 +123,20 @@ app.set('views', './views');
 
 - Make sure your folder structure is correctly set up. It should look something like this:
 
-```
-> pizza-express
-  > node_modules
-  > views
-     - layout.hbs
-     - toppings.hbs
-     - order.hbs
-  - app.js
-  - package.json
+  ```
+  > pizza-express
+    > node_modules
+    > views
+       - layout.hbs
+       - toppings.hbs
+       - order.hbs
+    - app.js
+    - package.json
 
-  // Note:
-  // > denotes directory
-  // - denotes file
-```
+    // Note:
+    // > denotes directory
+    // - denotes file
+  ```
 - Check your file extension names. It should be `.hbs` not `.html`
 
 - Did you save your files after making changes?
