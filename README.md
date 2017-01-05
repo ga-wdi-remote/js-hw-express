@@ -74,16 +74,14 @@ On `app.js` we will create 3 routes.
   });
   ```
 
-3. Make a GET route for `/order` that has 2 variable destinations (# of pizza, pizza size). When a user visits this route on `localhost:3000/order/10/medium`, they will see "Your order for `10` `medium` pizzas will be ready in 1 minute!"
+3. Make a GET route for `/order` that has 2 variable destinations (# of pizza, pizza size). When a user visits this route on `localhost:3000/order/10/medium`, they will see "Your order for `10` `medium` pizzas will be ready in 1 minute!" The syntax for the route will look like this:
 
-The syntax for the route will look like this:
-
-   ```
+  ```
    app.get('/order/:amount/:size', function(req, res, next) {
 
        res.send( // something );
    });
-   ```
+  ```
 
 4. git add, and git commit with the message "completed GET routes"
 
@@ -164,9 +162,7 @@ Our outcome will LOOK the same, but we'll change things "under the hood".
 
 
 ### Reach Goals
-1. Add a 4th "catch" route. This will be a "404 Page Not Found" route in which if the user visits any route besides "/", "/toppings", the server will "catch" the user is trying to access a non-existant route, and the user will see a "404 Page Not Found" message.
-
-For example, a request to `localhost:3000/pizza` will respond with a 404 message instead of "Cannot GET /pizza"
+1. Add a 4th "catch" route. This will be a "404 Page Not Found" route in which if the user visits any route besides "/", "/toppings", or "/order", the server will "catch" the user is trying to access a non-existant route, and the user will see a "404 Page Not Found" message. For example, a request to `localhost:3000/pizza` will respond with a 404 message instead of "Cannot GET /pizza"
 
 2. Add Static Assets. Our app works! But it looks pretty sad. Spruce it up with CSS:
    - Make the background with [this image, tiled](https://s-media-cache-ak0.pinimg.com/originals/36/10/06/3610062ed612bf558fc08ed252fe6241.jpg)
