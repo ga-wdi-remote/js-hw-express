@@ -1,0 +1,13 @@
+body{
+  background: url("https://s-media-cache-ak0.pinimg.com/236x/42/5a/b0/425ab009c4a1f27c93ae44c5748656a7.jpg")repeat fixed center;
+
+  font-size: 4em;
+  text-align: center;
+  font-family: Arial;
+  color: white;
+  font-family: 'Sigmar One', cursive;
+}
+
+p{
+  background: black;
+}
