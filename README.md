@@ -122,23 +122,6 @@ We are going to add views to your Pizza Express app and spice things up.
 
 - Make sure your folder structure is correctly set up. It should look something like this:
 
-<<<<<<< HEAD
-```
-> pizza-express
-  > node_modules
-  > views
-     - layout.hbs
-     - index.hbs
-     - toppings.hbs
-     - order.hbs
-  - app.js
-  - package.json
-
-  // Note:
-  // > denotes directory
-  // - denotes file
-```
-=======
   ```
   > pizza-express
     > node_modules
@@ -153,7 +136,7 @@ We are going to add views to your Pizza Express app and spice things up.
     // > denotes directory
     // - denotes file
   ```
->>>>>>> aabb68fccdb01e954bfa5f2fb614baaea83a8b2b
+
 - Check your file extension names. It should be `.hbs` not `.html`
 
 - Did you save your files after making changes?
